@@ -20,6 +20,8 @@ chmod +x undo.sh
 * Please note: during the installation of ./startup.sh for BYOB you may require another reboot if it's your first time running the script.
 
 ### Head over to Windows and follow the instructions in the windows-open-ports folder.
+* ***Please note:*** if your router doesnt support NAT loopback, this will ONLY work inside your internal network. This is only made for testing and educational purposes. Do not attempt to try this anywhere else without permission as its illegal and you will go to jail. Furthermore, make sure you have all virtual machines set as "bridged" in network settings.
+
 * For automatically opening specific ports on Windows, you can use a PowerShell script. Below is an example script that opens ports 1337, 1338, and 1339 for both TCP and UDP protocols:
 
 * Powershell script:
@@ -47,13 +49,26 @@ ForEach ($port in $ports) {
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 ```
 5. Change the directory to where you saved the script, e.g., cd C:\Users\YourUsername\Documents.
-6. Run the script by typing .\open_ports.ps1.
+6. Navigate to folder with scripts inside, Run the script by typing:
+```
+.\open_ports.ps1.
+```
 7. Please note that running PowerShell scripts can potentially harm your system if you don't know the script's source or purpose. Always review scripts before running them and ensure you understand their functionality.
 
 * To undo the changes made in powershell, run the "undo_ports.ps1" file.
+1. 
 ```
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+```
+2. 
+* Navigate to folder with scripts inside, Run the script by typing:
+```
 .\undo_ports.ps1
 ```
 
 ***Be sure to forward ports 1337-1339 in your default gateway.***
+
+***For best use, navigate to the byob/byob directory and run the client.py file using the ip address found in your ubuntu machine. then run server.py and execute the payload on your windows machine.***
+```
+sudo python3 client.py <ip> <port>
+```
