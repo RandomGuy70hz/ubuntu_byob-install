@@ -1,0 +1,29 @@
+# -- For automatically opening specific ports on Windows, you can use a PowerShell script. Below is an example script that opens ports 1337, 1338, and 1339 for both TCP and UDP protocols: -- #
+
+# Powershell script:
+
+$ports = @(1337, 1338, 1339)
+$protocols = @("TCP", "UDP")
+
+ForEach ($port in $ports) {
+    ForEach ($protocol in $protocols) {
+        $ruleName = "OpenPort-$port-$protocol"
+        $existingRule = Get-NetFirewallRule -DisplayName $ruleName -ErrorAction SilentlyContinue
+        if (-not $existingRule) {
+            New-NetFirewallRule -DisplayName $ruleName -Direction Inbound -Action Allow -Protocol $protocol -LocalPort $port
+        }
+    }
+}
+
+
+# -- To run the script: -- #
+1. # Open a text editor and paste the script above.
+2. # Save the file with a .ps1 extension, e.g., open_ports.ps1.
+
+3. # Right-click on the PowerShell icon in the Start menu, and select "Run as administrator."
+4. # Run this command in powershell to bypass execution policy or else you'll get an error:
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+
+5. # Change the directory to where you saved the script, e.g., cd C:\Users\YourUsername\Documents.
+6. # Run the script by typing .\open_ports.ps1.
+7. # Please note that running PowerShell scripts can potentially harm your system if you don't know the script's source or purpose. Always review scripts before running them and ensure you understand their functionality.

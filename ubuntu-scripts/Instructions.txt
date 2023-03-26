@@ -1,0 +1,16 @@
+#-- Instructions for Ubuntu 20.04 --#
+
+# First, run the following commands:
+chmod +x before_reboot.sh
+chmod +x after_reboot.sh
+chmod +x undo.sh
+
+# Run the "before_reboot" script:
+./before_reboot.sh
+
+# After rebooting run the "after_reboot" script by:
+./after_reboot.sh
+
+# Please note: during the installation of ./startup.sh for BYOB you may require another reboot if it's your first time running the script.
+
+# Then head over to Windows and follow the instructions in the windows-open-ports folder.
