@@ -1,6 +1,7 @@
 # Instructions for Ubuntu 20.04
 
-***This repo was made for users having issues installing byob and nothing more. You can find the original repo here:***[Firey byob repo:](https://github.com/fireFerry/byob.git)
+***This repo was made for users having issues installing byob and nothing more. You can find the original repo here:***
+[ Firey byob repo](https://github.com/fireFerry/byob.git)
 
 <br>
 
@@ -78,3 +79,4 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 ```
 sudo python3 client.py <ip> <port>
 ```
+           
