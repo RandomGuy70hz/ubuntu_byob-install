@@ -1,5 +1,8 @@
 # Instructions for Ubuntu 20.04
 
+***This repo was made for users having issues installing byob and nothing more. You can find the original repo here:***
+[Firey BYOB Repo]: https://github.com/fireFerry/byob.git
+
 ### First, run the following commands:
 ```
 chmod +x before_reboot.sh
@@ -56,11 +59,9 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 7. Please note that running PowerShell scripts can potentially harm your system if you don't know the script's source or purpose. Always review scripts before running them and ensure you understand their functionality.
 
 * To undo the changes made in powershell, run the "undo_ports.ps1" file.
-1. 
 ```
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 ```
-2. 
 * Navigate to folder with scripts inside, Run the script by typing:
 ```
 .\undo_ports.ps1
