@@ -1,7 +1,9 @@
 # Instructions for Ubuntu 20.04
 
 ***This repo was made for users having issues installing byob and nothing more. You can find the original repo here:***
-[Firey BYOB Repo]: https://github.com/fireFerry/byob.git
+[Firey BYOB Repo can be found here:](https://github.com/fireFerry/byob.git)
+
+<br>
 
 ### First, run the following commands:
 ```
@@ -21,6 +23,8 @@ chmod +x undo.sh
 * If you would like to undo all of the changes made in before_reboot & after_reboot run the undo.sh script.
 
 * Please note: during the installation of ./startup.sh for BYOB you may require another reboot if it's your first time running the script.
+
+<br>
 
 ### Head over to Windows and follow the instructions in the windows-open-ports folder.
 * ***Please note:*** if your router doesnt support NAT loopback, this will ONLY work inside your internal network. This is only made for testing and educational purposes. Do not attempt to try this anywhere else without permission as its illegal and you will go to jail. Furthermore, make sure you have all virtual machines set as "bridged" in network settings.
@@ -67,9 +71,11 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 .\undo_ports.ps1
 ```
 
+<br>
+
 ***Be sure to forward ports 1337-1339 in your default gateway.***
 
-***For best use, navigate to the byob/byob directory and run the client.py file using the ip address found in your ubuntu machine. then run server.py and execute the payload on your windows machine.***
+* ***For best use***, navigate to the byob/byob directory and run the client.py file using the ip address found in your ubuntu machine. then run server.py and execute the payload on your windows machine.
 ```
 sudo python3 client.py <ip> <port>
 ```
